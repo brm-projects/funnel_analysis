@@ -2,35 +2,54 @@ import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
 import random
+import os
 
 # Parameters
-n_users = 1000
-start_date = datetime(2025, 1, 1)
+n_users = 50  # adjust this number for bigger dataset
+start_date = datetime(2025, 9, 20, 8, 0)
 
-steps = ["signup", "profile_completed", "kyc_passed", "first_payment"]
-sources = ["ads", "organic", "referral"]
+steps = [
+    ("signup", 1),
+    ("profile_completed", 2),
+    ("kyc_passed", 3),
+    ("first_payment", 4),
+]
 
-rows = []
+sources = ["ads", "organic", "partner"]
+countries = ["FR", "PT", "BR"]
+
+records = []
 
 for user_id in range(1, n_users + 1):
-    # each user gets a random source
+    # each user has a funnel start time
+    event_time = start_date + timedelta(minutes=random.randint(0, 1200))
     source = random.choice(sources)
-
-    # each user signs up at some random time
-    event_time = start_date + timedelta(minutes=random.randint(0, 60*24*30))  # within 30 days
-    rows.append([user_id, "signup", event_time.isoformat(), source])
-
-    # chance to complete further steps
-    for step in steps[1:]:
-        if random.random() < 0.8:  # 80% chance to move to next step
-            event_time += timedelta(minutes=random.randint(10, 1440))  # within 1 day after last
-            rows.append([user_id, step, event_time.isoformat(), source])
+    country = random.choice(countries)
+    
+    # simulate funnel progression (dropout possible)
+    for step_name, step_num in steps:
+        # random dropout: user may stop at any step
+        if random.random() < 0.8:  # 80% chance to continue
+            records.append([
+                user_id,
+                event_time.isoformat() + "Z",  # keep ISO8601 with Z
+                step_name,
+                step_num,
+                source,
+                country
+            ])
+            # next step happens within 1–60 minutes
+            event_time += timedelta(minutes=random.randint(1, 60))
         else:
             break
 
-# Build DataFrame
-df = pd.DataFrame(rows, columns=["user_id", "event_name", "event_time", "source"])
+# Create DataFrame
+df = pd.DataFrame(records, columns=["user_id","event_time","event_name","step","source","country"])
 
-# Save as CSV in seeds folder
+# Make sure seeds folder exists
+os.makedirs("seeds", exist_ok=True)
+
+# Save to CSV
 df.to_csv("seeds/events.csv", index=False)
-print("✅ Generated dataset with", len(df), "rows")
+
+print(f"Generated {len(df)} events for {n_users} users → seeds/events.csv")
