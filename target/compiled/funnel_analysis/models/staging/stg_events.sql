@@ -1,6 +1,6 @@
 --clean & standardize the raw seed (analytics.events) so types/text are consistent.
 
-{{ config(materialized='view') }}
+
 
 with raw as (
   select
@@ -10,7 +10,7 @@ with raw as (
     cast(step as int64)                                 as step,
     lower(source)                                       as source,
     upper(country)                                      as country
-  from {{ ref('events') }}   -- the seeded CSV table
+  from `funnel-analysis-473408`.`analytics`.`events`   -- the seeded CSV table
   where lower(event_name) in ('signup','profile_completed','kyc_passed','first_payment')
 )
 select * from raw

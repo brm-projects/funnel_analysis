@@ -1,8 +1,8 @@
 -- reshape into one row per user with a timestamp column for each step.
 
-{{ config(materialized='view') }}
 
-with s as (select * from {{ ref('int_user_first_step_ts') }})
+
+with s as (select * from `funnel-analysis-473408`.`analytics`.`int_user_first_step_ts`)
 
 select
   user_id,

@@ -1,8 +1,20 @@
--- conversion by signup cohort (month of signup).
 
-{{ config(materialized='table') }}
+  
+    
 
-with e as (select * from {{ ref('stg_events') }}),
+    create or replace table `funnel-analysis-473408`.`analytics`.`fct_funnel_by_cohort`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      -- conversion by signup cohort (month of signup).
+
+
+
+with e as (select * from `funnel-analysis-473408`.`analytics`.`stg_events`),
 
 signup as (
   select user_id, min(event_ts) as signup_ts
@@ -11,7 +23,7 @@ signup as (
   group by 1
 ),
 
-path as (select * from {{ ref('int_user_funnel_path') }}),
+path as (select * from `funnel-analysis-473408`.`analytics`.`int_user_funnel_path`),
 
 joined as (
   select
@@ -30,3 +42,5 @@ select
 from joined
 group by signup_month
 order by signup_month
+    );
+  

@@ -1,8 +1,12 @@
--- reshape into one row per user with a timestamp column for each step.
 
-{{ config(materialized='view') }}
 
-with s as (select * from {{ ref('int_user_first_step_ts') }})
+  create or replace view `funnel-analysis-473408`.`analytics`.`int_user_funnel_path`
+  OPTIONS()
+  as -- reshape into one row per user with a timestamp column for each step.
+
+
+
+with s as (select * from `funnel-analysis-473408`.`analytics`.`int_user_first_step_ts`)
 
 select
   user_id,
@@ -11,4 +15,5 @@ select
   max(if(event_name='kyc_passed',        first_ts, null)) as ts_kyc_passed,
   max(if(event_name='first_payment',     first_ts, null)) as ts_first_payment
 from s
-group by 1
+group by 1;
+

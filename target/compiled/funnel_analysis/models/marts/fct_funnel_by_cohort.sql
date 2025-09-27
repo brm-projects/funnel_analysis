@@ -1,8 +1,8 @@
 -- conversion by signup cohort (month of signup).
 
-{{ config(materialized='table') }}
 
-with e as (select * from {{ ref('stg_events') }}),
+
+with e as (select * from `funnel-analysis-473408`.`analytics`.`stg_events`),
 
 signup as (
   select user_id, min(event_ts) as signup_ts
@@ -11,7 +11,7 @@ signup as (
   group by 1
 ),
 
-path as (select * from {{ ref('int_user_funnel_path') }}),
+path as (select * from `funnel-analysis-473408`.`analytics`.`int_user_funnel_path`),
 
 joined as (
   select

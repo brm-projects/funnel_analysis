@@ -1,8 +1,8 @@
 -- conversion broken down by acquisition source (e.g., ads, organic, partner).
 
-{{ config(materialized='table') }}
 
-with e as (select * from {{ ref('stg_events') }}),
+
+with e as (select * from `funnel-analysis-473408`.`analytics`.`stg_events`),
 
 firsts as (
   select user_id, min(event_ts) as signup_ts
@@ -20,7 +20,7 @@ source_at_signup as (
   group by f.user_id
 ),
 
-path as (select * from {{ ref('int_user_funnel_path') }}),
+path as (select * from `funnel-analysis-473408`.`analytics`.`int_user_funnel_path`),
 
 joined as (
   select p.*, s.source

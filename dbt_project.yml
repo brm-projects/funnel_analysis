@@ -5,6 +5,17 @@ model-paths: ["models"]
 seed-paths: ["seeds"]
 clean-targets: ["target"]
 
+seeds:
+  funnel_analysis:
+    events:
+      +column_types:
+        user_id: integer
+        event_time: timestamp
+        event_name: string
+        step: integer
+        source: string
+        country: string
+
 models:
   funnel_analysis:
     +materialized: view

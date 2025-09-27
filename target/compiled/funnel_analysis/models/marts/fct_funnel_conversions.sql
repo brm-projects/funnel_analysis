@@ -1,8 +1,8 @@
 -- overall counts and conversion rates from step to step and end-to-end.
 
-{{ config(materialized='table') }}
 
-with path as (select * from {{ ref('int_user_funnel_path') }})
+
+with path as (select * from `funnel-analysis-473408`.`analytics`.`int_user_funnel_path`)
 
 select
   countif(ts_signup is not null)            as n_signup,
