@@ -2609,3 +2609,340 @@ having count(*) > 1
 [0m17:12:31.981180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1118a5e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1602db3e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1602db750>]}
 [0m17:12:31.981426 [debug] [MainThread]: Flushing usage events
 [0m17:12:32.364989 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:14:18.594048 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103af01a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104943890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1049439d0>]}
+
+
+============================== 17:14:18.597333 | db6e738e-c144-4e7e-aa3b-3d5528f52740 ==============================
+[0m17:14:18.597333 [info ] [MainThread]: Running with dbt=1.10.13
+[0m17:14:18.597649 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'log_format': 'default', 'invocation_command': 'dbt test', 'introspect': 'True', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'None', 'log_path': '/Users/barbaramariano/repositories/funnel_analysis/logs', 'no_print': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'printer_width': '80', 'version_check': 'True', 'write_json': 'True', 'profiles_dir': '/Users/barbaramariano/.dbt', 'static_parser': 'True', 'debug': 'False', 'use_colors': 'True', 'log_cache_events': 'False'}
+[0m17:14:20.377862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'db6e738e-c144-4e7e-aa3b-3d5528f52740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103c37bb0>]}
+[0m17:14:20.404745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'db6e738e-c144-4e7e-aa3b-3d5528f52740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15d865370>]}
+[0m17:14:20.405082 [info ] [MainThread]: Registered adapter: bigquery=1.10.2
+[0m17:14:20.605244 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m17:14:20.673992 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:14:20.674212 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:14:20.695346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'db6e738e-c144-4e7e-aa3b-3d5528f52740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15dc7a250>]}
+[0m17:14:20.731971 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/barbaramariano/repositories/funnel_analysis/target/manifest.json
+[0m17:14:20.733604 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/barbaramariano/repositories/funnel_analysis/target/semantic_manifest.json
+[0m17:14:20.754179 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'db6e738e-c144-4e7e-aa3b-3d5528f52740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15dfb7980>]}
+[0m17:14:20.754437 [info ] [MainThread]: Found 6 models, 1 seed, 5 data tests, 495 macros
+[0m17:14:20.754600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'db6e738e-c144-4e7e-aa3b-3d5528f52740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15df4be70>]}
+[0m17:14:20.755545 [info ] [MainThread]: 
+[0m17:14:20.755714 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m17:14:20.755832 [info ] [MainThread]: 
+[0m17:14:20.756057 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m17:14:20.757942 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_funnel-analysis-473408_analytics'
+[0m17:14:20.758119 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:14:21.551182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'db6e738e-c144-4e7e-aa3b-3d5528f52740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15df28d50>]}
+[0m17:14:21.552813 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:14:21.556041 [debug] [Thread-1 (]: Began running node test.funnel_analysis.accepted_values_stg_events_event_name__signup__profile_completed__kyc_passed__first_payment.dcb92d9fe2
+[0m17:14:21.556483 [debug] [Thread-2 (]: Began running node test.funnel_analysis.not_null_int_user_funnel_path_user_id.2cec599634
+[0m17:14:21.556902 [debug] [Thread-4 (]: Began running node test.funnel_analysis.not_null_stg_events_user_id.63ec98fbc4
+[0m17:14:21.557253 [debug] [Thread-3 (]: Began running node test.funnel_analysis.not_null_stg_events_event_ts.085d2fcee0
+[0m17:14:21.557651 [info ] [Thread-1 (]: 1 of 5 START test accepted_values_stg_events_event_name__signup__profile_completed__kyc_passed__first_payment  [RUN]
+[0m17:14:21.558137 [info ] [Thread-2 (]: 2 of 5 START test not_null_int_user_funnel_path_user_id ........................ [RUN]
+[0m17:14:21.558641 [info ] [Thread-4 (]: 4 of 5 START test not_null_stg_events_user_id .................................. [RUN]
+[0m17:14:21.559163 [info ] [Thread-3 (]: 3 of 5 START test not_null_stg_events_event_ts ................................. [RUN]
+[0m17:14:21.559597 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_funnel-analysis-473408_analytics, now test.funnel_analysis.accepted_values_stg_events_event_name__signup__profile_completed__kyc_passed__first_payment.dcb92d9fe2)
+[0m17:14:21.560024 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.funnel_analysis.not_null_int_user_funnel_path_user_id.2cec599634'
+[0m17:14:21.560380 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.funnel_analysis.not_null_stg_events_user_id.63ec98fbc4'
+[0m17:14:21.560729 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.funnel_analysis.not_null_stg_events_event_ts.085d2fcee0'
+[0m17:14:21.561033 [debug] [Thread-1 (]: Began compiling node test.funnel_analysis.accepted_values_stg_events_event_name__signup__profile_completed__kyc_passed__first_payment.dcb92d9fe2
+[0m17:14:21.561419 [debug] [Thread-2 (]: Began compiling node test.funnel_analysis.not_null_int_user_funnel_path_user_id.2cec599634
+[0m17:14:21.561708 [debug] [Thread-4 (]: Began compiling node test.funnel_analysis.not_null_stg_events_user_id.63ec98fbc4
+[0m17:14:21.561992 [debug] [Thread-3 (]: Began compiling node test.funnel_analysis.not_null_stg_events_event_ts.085d2fcee0
+[0m17:14:21.583043 [debug] [Thread-2 (]: Writing injected SQL for node "test.funnel_analysis.not_null_int_user_funnel_path_user_id.2cec599634"
+[0m17:14:21.586218 [debug] [Thread-1 (]: Writing injected SQL for node "test.funnel_analysis.accepted_values_stg_events_event_name__signup__profile_completed__kyc_passed__first_payment.dcb92d9fe2"
+[0m17:14:21.588309 [debug] [Thread-4 (]: Writing injected SQL for node "test.funnel_analysis.not_null_stg_events_user_id.63ec98fbc4"
+[0m17:14:21.589896 [debug] [Thread-3 (]: Writing injected SQL for node "test.funnel_analysis.not_null_stg_events_event_ts.085d2fcee0"
+[0m17:14:21.590411 [debug] [Thread-1 (]: Began executing node test.funnel_analysis.accepted_values_stg_events_event_name__signup__profile_completed__kyc_passed__first_payment.dcb92d9fe2
+[0m17:14:21.590581 [debug] [Thread-4 (]: Began executing node test.funnel_analysis.not_null_stg_events_user_id.63ec98fbc4
+[0m17:14:21.590738 [debug] [Thread-2 (]: Began executing node test.funnel_analysis.not_null_int_user_funnel_path_user_id.2cec599634
+[0m17:14:21.590876 [debug] [Thread-3 (]: Began executing node test.funnel_analysis.not_null_stg_events_event_ts.085d2fcee0
+[0m17:14:21.600613 [debug] [Thread-1 (]: Writing runtime sql for node "test.funnel_analysis.accepted_values_stg_events_event_name__signup__profile_completed__kyc_passed__first_payment.dcb92d9fe2"
+[0m17:14:21.601556 [debug] [Thread-4 (]: Writing runtime sql for node "test.funnel_analysis.not_null_stg_events_user_id.63ec98fbc4"
+[0m17:14:21.602416 [debug] [Thread-2 (]: Writing runtime sql for node "test.funnel_analysis.not_null_int_user_funnel_path_user_id.2cec599634"
+[0m17:14:21.603456 [debug] [Thread-3 (]: Writing runtime sql for node "test.funnel_analysis.not_null_stg_events_event_ts.085d2fcee0"
+[0m17:14:21.603978 [debug] [Thread-1 (]: On test.funnel_analysis.accepted_values_stg_events_event_name__signup__profile_completed__kyc_passed__first_payment.dcb92d9fe2: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "funnel_analysis", "target_name": "prod", "node_id": "test.funnel_analysis.accepted_values_stg_events_event_name__signup__profile_completed__kyc_passed__first_payment.dcb92d9fe2"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        event_name as value_field,
+        count(*) as n_records
+
+    from `funnel-analysis-473408`.`analytics`.`stg_events`
+    group by event_name
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'signup','profile_completed','kyc_passed','first_payment'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:14:21.604200 [debug] [Thread-2 (]: On test.funnel_analysis.not_null_int_user_funnel_path_user_id.2cec599634: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "funnel_analysis", "target_name": "prod", "node_id": "test.funnel_analysis.not_null_int_user_funnel_path_user_id.2cec599634"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select user_id
+from `funnel-analysis-473408`.`analytics`.`int_user_funnel_path`
+where user_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:14:21.604395 [debug] [Thread-4 (]: On test.funnel_analysis.not_null_stg_events_user_id.63ec98fbc4: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "funnel_analysis", "target_name": "prod", "node_id": "test.funnel_analysis.not_null_stg_events_user_id.63ec98fbc4"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select user_id
+from `funnel-analysis-473408`.`analytics`.`stg_events`
+where user_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:14:21.604590 [debug] [Thread-3 (]: On test.funnel_analysis.not_null_stg_events_event_ts.085d2fcee0: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "funnel_analysis", "target_name": "prod", "node_id": "test.funnel_analysis.not_null_stg_events_event_ts.085d2fcee0"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select event_ts
+from `funnel-analysis-473408`.`analytics`.`stg_events`
+where event_ts is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:14:21.604757 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:14:21.604895 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:14:21.605053 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:14:21.605186 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:14:22.210547 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=funnel-analysis-473408&j=bq:europe-west9:b8dd7332-ac73-43fc-8409-cd2da09fd663&page=queryresults
+[0m17:14:22.212305 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=funnel-analysis-473408&j=bq:europe-west9:348a025c-f45d-4689-ac9f-dcc4778916e3&page=queryresults
+[0m17:14:22.214159 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=funnel-analysis-473408&j=bq:europe-west9:6eda1b2a-1f99-4cbf-8454-9129dee1bbcb&page=queryresults
+[0m17:14:22.214855 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=funnel-analysis-473408&j=bq:europe-west9:19066885-032d-48ff-b6b0-54b6a3abd016&page=queryresults
+[0m17:14:22.497079 [info ] [Thread-3 (]: 3 of 5 PASS not_null_stg_events_event_ts ....................................... [[32mPASS[0m in 0.94s]
+[0m17:14:22.498341 [debug] [Thread-3 (]: Finished running node test.funnel_analysis.not_null_stg_events_event_ts.085d2fcee0
+[0m17:14:22.498732 [debug] [Thread-3 (]: Began running node test.funnel_analysis.unique_int_user_funnel_path_user_id.872d2b13f6
+[0m17:14:22.498968 [info ] [Thread-3 (]: 5 of 5 START test unique_int_user_funnel_path_user_id .......................... [RUN]
+[0m17:14:22.499214 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.funnel_analysis.not_null_stg_events_event_ts.085d2fcee0, now test.funnel_analysis.unique_int_user_funnel_path_user_id.872d2b13f6)
+[0m17:14:22.508504 [info ] [Thread-2 (]: 2 of 5 PASS not_null_int_user_funnel_path_user_id .............................. [[32mPASS[0m in 0.95s]
+[0m17:14:22.509179 [debug] [Thread-3 (]: Began compiling node test.funnel_analysis.unique_int_user_funnel_path_user_id.872d2b13f6
+[0m17:14:22.508986 [info ] [Thread-1 (]: 1 of 5 PASS accepted_values_stg_events_event_name__signup__profile_completed__kyc_passed__first_payment  [[32mPASS[0m in 0.95s]
+[0m17:14:22.516504 [debug] [Thread-1 (]: Finished running node test.funnel_analysis.accepted_values_stg_events_event_name__signup__profile_completed__kyc_passed__first_payment.dcb92d9fe2
+[0m17:14:22.510889 [info ] [Thread-4 (]: 4 of 5 PASS not_null_stg_events_user_id ........................................ [[32mPASS[0m in 0.95s]
+[0m17:14:22.517242 [debug] [Thread-4 (]: Finished running node test.funnel_analysis.not_null_stg_events_user_id.63ec98fbc4
+[0m17:14:22.515951 [debug] [Thread-3 (]: Writing injected SQL for node "test.funnel_analysis.unique_int_user_funnel_path_user_id.872d2b13f6"
+[0m17:14:22.511304 [debug] [Thread-2 (]: Finished running node test.funnel_analysis.not_null_int_user_funnel_path_user_id.2cec599634
+[0m17:14:22.518994 [debug] [Thread-3 (]: Began executing node test.funnel_analysis.unique_int_user_funnel_path_user_id.872d2b13f6
+[0m17:14:22.523837 [debug] [Thread-3 (]: Writing runtime sql for node "test.funnel_analysis.unique_int_user_funnel_path_user_id.872d2b13f6"
+[0m17:14:22.527521 [debug] [Thread-3 (]: On test.funnel_analysis.unique_int_user_funnel_path_user_id.872d2b13f6: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "funnel_analysis", "target_name": "prod", "node_id": "test.funnel_analysis.unique_int_user_funnel_path_user_id.872d2b13f6"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select user_id as unique_field
+  from `funnel-analysis-473408`.`analytics`.`int_user_funnel_path`
+  where user_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:14:22.528045 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:14:23.503825 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=funnel-analysis-473408&j=bq:europe-west9:3c304c4c-ef26-4e53-afd0-7f1082bb5f0d&page=queryresults
+[0m17:14:23.673168 [info ] [Thread-3 (]: 5 of 5 PASS unique_int_user_funnel_path_user_id ................................ [[32mPASS[0m in 1.17s]
+[0m17:14:23.675217 [debug] [Thread-3 (]: Finished running node test.funnel_analysis.unique_int_user_funnel_path_user_id.872d2b13f6
+[0m17:14:23.694257 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:14:23.696056 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:14:23.696902 [debug] [MainThread]: Connection 'test.funnel_analysis.accepted_values_stg_events_event_name__signup__profile_completed__kyc_passed__first_payment.dcb92d9fe2' was properly closed.
+[0m17:14:23.697106 [debug] [MainThread]: Connection 'test.funnel_analysis.not_null_int_user_funnel_path_user_id.2cec599634' was properly closed.
+[0m17:14:23.697252 [debug] [MainThread]: Connection 'test.funnel_analysis.not_null_stg_events_user_id.63ec98fbc4' was properly closed.
+[0m17:14:23.697384 [debug] [MainThread]: Connection 'test.funnel_analysis.unique_int_user_funnel_path_user_id.872d2b13f6' was properly closed.
+[0m17:14:23.697603 [info ] [MainThread]: 
+[0m17:14:23.697791 [info ] [MainThread]: Finished running 5 data tests in 0 hours 0 minutes and 2.94 seconds (2.94s).
+[0m17:14:23.698500 [debug] [MainThread]: Command end result
+[0m17:14:23.721709 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/barbaramariano/repositories/funnel_analysis/target/manifest.json
+[0m17:14:23.723887 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/barbaramariano/repositories/funnel_analysis/target/semantic_manifest.json
+[0m17:14:23.731149 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/barbaramariano/repositories/funnel_analysis/target/run_results.json
+[0m17:14:23.731410 [info ] [MainThread]: 
+[0m17:14:23.731715 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:14:23.731977 [info ] [MainThread]: 
+[0m17:14:23.732224 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m17:14:23.736008 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 5.179617, "process_in_blocks": "0", "process_kernel_time": 0.636678, "process_mem_max_rss": "345522176", "process_out_blocks": "0", "process_user_time": 3.579188}
+[0m17:14:23.736406 [debug] [MainThread]: Command `dbt test` succeeded at 17:14:23.736335 after 5.18 seconds
+[0m17:14:23.736881 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104781e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15dfdb280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15dfdac50>]}
+[0m17:14:23.737459 [debug] [MainThread]: Flushing usage events
+[0m17:14:24.173839 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:15:06.981411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070141a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110963890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1109639d0>]}
+
+
+============================== 17:15:06.985714 | ebb3a702-34ee-4719-a561-ebfe48ca4147 ==============================
+[0m17:15:06.985714 [info ] [MainThread]: Running with dbt=1.10.13
+[0m17:15:06.986043 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'write_json': 'True', 'use_colors': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'target_path': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'empty': 'False', 'version_check': 'True', 'log_format': 'default', 'profiles_dir': '/Users/barbaramariano/.dbt', 'debug': 'False', 'indirect_selection': 'eager', 'invocation_command': 'dbt build -s fct_funnel_conversions', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'log_path': '/Users/barbaramariano/repositories/funnel_analysis/logs', 'cache_selected_only': 'False', 'quiet': 'False', 'use_experimental_parser': 'False', 'introspect': 'True', 'warn_error': 'None'}
+[0m17:15:08.697325 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ebb3a702-34ee-4719-a561-ebfe48ca4147', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10715bbb0>]}
+[0m17:15:08.723469 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ebb3a702-34ee-4719-a561-ebfe48ca4147', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x160d6d370>]}
+[0m17:15:08.723767 [info ] [MainThread]: Registered adapter: bigquery=1.10.2
+[0m17:15:08.892222 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m17:15:08.958749 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:15:08.958937 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:15:08.979621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ebb3a702-34ee-4719-a561-ebfe48ca4147', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16127a950>]}
+[0m17:15:09.015652 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/barbaramariano/repositories/funnel_analysis/target/manifest.json
+[0m17:15:09.016817 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/barbaramariano/repositories/funnel_analysis/target/semantic_manifest.json
+[0m17:15:09.037228 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ebb3a702-34ee-4719-a561-ebfe48ca4147', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1615f2210>]}
+[0m17:15:09.037497 [info ] [MainThread]: Found 6 models, 1 seed, 5 data tests, 495 macros
+[0m17:15:09.038378 [info ] [MainThread]: 
+[0m17:15:09.038564 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m17:15:09.038690 [info ] [MainThread]: 
+[0m17:15:09.038918 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m17:15:09.039312 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_funnel-analysis-473408'
+[0m17:15:09.039491 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:15:09.833516 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_funnel-analysis-473408, now list_funnel-analysis-473408_analytics)
+[0m17:15:09.833886 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:15:10.014145 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ebb3a702-34ee-4719-a561-ebfe48ca4147', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x161619ef0>]}
+[0m17:15:10.015731 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:15:10.021093 [debug] [Thread-1 (]: Began running node model.funnel_analysis.fct_funnel_conversions
+[0m17:15:10.021752 [info ] [Thread-1 (]: 1 of 1 START sql table model analytics.fct_funnel_conversions .................. [RUN]
+[0m17:15:10.022257 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_funnel-analysis-473408_analytics, now model.funnel_analysis.fct_funnel_conversions)
+[0m17:15:10.022629 [debug] [Thread-1 (]: Began compiling node model.funnel_analysis.fct_funnel_conversions
+[0m17:15:10.034152 [debug] [Thread-1 (]: Writing injected SQL for node "model.funnel_analysis.fct_funnel_conversions"
+[0m17:15:10.035923 [debug] [Thread-1 (]: Began executing node model.funnel_analysis.fct_funnel_conversions
+[0m17:15:10.047246 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:15:10.192434 [debug] [Thread-1 (]: Writing runtime sql for node "model.funnel_analysis.fct_funnel_conversions"
+[0m17:15:10.193155 [debug] [Thread-1 (]: On model.funnel_analysis.fct_funnel_conversions: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "funnel_analysis", "target_name": "prod", "node_id": "model.funnel_analysis.fct_funnel_conversions"} */
+
+  
+    
+
+    create or replace table `funnel-analysis-473408`.`analytics`.`fct_funnel_conversions`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      -- overall counts and conversion rates from step to step and end-to-end.
+
+
+
+with path as (select * from `funnel-analysis-473408`.`analytics`.`int_user_funnel_path`)
+
+select
+  countif(ts_signup is not null)            as n_signup,
+  countif(ts_profile_completed is not null) as n_profile_completed,
+  countif(ts_kyc_passed is not null)        as n_kyc_passed,
+  countif(ts_first_payment is not null)     as n_first_payment,
+
+  safe_divide(countif(ts_profile_completed is not null), countif(ts_signup is not null))          as cr_signup_to_profile,
+  safe_divide(countif(ts_kyc_passed is not null),        countif(ts_profile_completed is not null)) as cr_profile_to_kyc,
+  safe_divide(countif(ts_first_payment is not null),     countif(ts_kyc_passed is not null))        as cr_kyc_to_payment,
+  safe_divide(countif(ts_first_payment is not null),     countif(ts_signup is not null))             as cr_signup_to_payment
+from path
+    );
+  
+[0m17:15:10.811612 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=funnel-analysis-473408&j=bq:europe-west9:a53ca750-78df-4044-8f63-88715d6dabef&page=queryresults
+[0m17:15:12.235606 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ebb3a702-34ee-4719-a561-ebfe48ca4147', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16197bd40>]}
+[0m17:15:12.236267 [info ] [Thread-1 (]: 1 of 1 OK created sql table model analytics.fct_funnel_conversions ............. [[32mCREATE TABLE (1.0 rows, 264.0 Bytes processed)[0m in 2.21s]
+[0m17:15:12.236611 [debug] [Thread-1 (]: Finished running node model.funnel_analysis.fct_funnel_conversions
+[0m17:15:12.237495 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:15:12.237858 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:15:12.238012 [debug] [MainThread]: Connection 'model.funnel_analysis.fct_funnel_conversions' was properly closed.
+[0m17:15:12.238183 [info ] [MainThread]: 
+[0m17:15:12.238343 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 3.20 seconds (3.20s).
+[0m17:15:12.238697 [debug] [MainThread]: Command end result
+[0m17:15:12.251768 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/barbaramariano/repositories/funnel_analysis/target/manifest.json
+[0m17:15:12.253367 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/barbaramariano/repositories/funnel_analysis/target/semantic_manifest.json
+[0m17:15:12.256526 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/barbaramariano/repositories/funnel_analysis/target/run_results.json
+[0m17:15:12.256684 [info ] [MainThread]: 
+[0m17:15:12.256881 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:15:12.257011 [info ] [MainThread]: 
+[0m17:15:12.257169 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m17:15:12.258972 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 5.3163075, "process_in_blocks": "0", "process_kernel_time": 0.57513, "process_mem_max_rss": "344801280", "process_out_blocks": "0", "process_user_time": 3.454941}
+[0m17:15:12.259291 [debug] [MainThread]: Command `dbt build` succeeded at 17:15:12.259240 after 5.32 seconds
+[0m17:15:12.259509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107fa5e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1619e8730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1619e89f0>]}
+[0m17:15:12.259673 [debug] [MainThread]: Flushing usage events
+[0m17:15:12.640285 [debug] [MainThread]: An error was encountered while trying to flush usage events
