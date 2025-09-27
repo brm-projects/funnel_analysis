@@ -1,0 +1,12 @@
+name: funnel_analysis
+version: 1.0.0
+profile: funnel_analysis
+model-paths: ["models"]
+seed-paths: ["seeds"]
+clean-targets: ["target"]
+
+models:
+  funnel_analysis:
+    +materialized: view
+    marts:
+      +materialized: table

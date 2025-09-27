@@ -1,0 +1,17 @@
+version: 2
+models:
+  - name: stg_events
+    columns:
+      - name: user_id
+        tests: [not_null]
+      - name: event_ts
+        tests: [not_null]
+      - name: event_name
+        tests:
+          - accepted_values:
+              values: ['signup','profile_completed','kyc_passed','first_payment']
+
+  - name: int_user_funnel_path
+    columns:
+      - name: user_id
+        tests: [not_null, unique]
