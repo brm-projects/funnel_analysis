@@ -1,4 +1,4 @@
-# Funnel Analysis with dbt + BigQuery + Looker
+# Funnel Analysis with dbt + BigQuery
 
 This project demonstrates how to build an **end-to-end analytics workflow** for user funnel analysis, from raw events to business insights.
 
