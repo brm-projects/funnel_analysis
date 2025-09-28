@@ -16,20 +16,19 @@ The objective is to identify **where users drop off**, and to analyze difference
 - **Python** → generate synthetic seed data (`events.csv`)
 - **dbt** → transform raw events into clean, business-ready models
 - **BigQuery (Google Cloud)** → data warehouse
-- **Looker Studio** → interactive dashboard for storytelling
+- **Dashboard (Looker)** (ongoing)
 
 ## Repository Structure
-seeds/
-events.csv # Synthetic event data
-models/
-staging/ # Raw events cleaned (views)
-intermediate/ # Funnel path logic (views)
-marts/ # Business-ready facts (tables)
-schema.yml # Tests (nulls, accepted values)
+- seeds/
+- events.csv # Synthetic event data
+- models/
+- staging/ # Raw events cleaned (views)
+- intermediate/ # Funnel path logic (views)
+- marts/ # Business-ready facts (tables)
+- schema.yml # Tests (nulls, accepted values)
 
 
-## Dashboard
-[View the interactive Looker Studio dashboard]
+## Dashboard (ongoing)
 
 The dashboard walks through:
 - **Funnel Overview** → conversion rates at each step
@@ -37,7 +36,6 @@ The dashboard walks through:
 - **Cohort Analysis** → conversions over time
 - **Geography** → country-level drop-offs
 
-Screenshots:  
 
 ## Reproducibility
 To reproduce locally:
